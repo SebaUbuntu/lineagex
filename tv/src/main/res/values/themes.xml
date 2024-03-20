@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.Material3.DayNight.Leanback" parent="Theme.Material3.DayNight.NoActionBar">
+        <!--
+             Keep in sync with whatever Theme.AppCompat.LeanbackBase
+             adds on top of Theme.AppCompat.NoActionBar
+
+             Changes made:
+             - ?android:attr/colorAccent -> ?attr/colorAccent
+             - ?android:attr/colorPrimaryDark -> ?attr/colorPrimaryDark
+             - Removed android:colorPrimary and android:colorPrimaryDark overrides
+        -->
+
+        <item name="viewInflaterClass">androidx.leanback.widget.LeanbackAppCompatViewInflater</item>
+        <item name="playbackProgressPrimaryColor">?attr/colorAccent</item>
+        <item name="playbackControlsIconHighlightColor">?attr/colorAccent</item>
+        <item name="defaultBrandColor">?attr/colorPrimary</item>
+        <item name="defaultBrandColorDark">?attr/colorPrimaryDark</item>
+
+        <item name="android:windowOverscan">true</item>
+        <item name="guidedStepTheme">@style/Theme.AppCompat.Leanback.GuidedStep</item>
+
+        <item name="android:windowSharedElementEnterTransition" tools:ignore="PrivateResource">
+            @transition/lb_shared_element_enter_transition
+        </item>
+
+        <item name="android:windowSharedElementReturnTransition" tools:ignore="PrivateResource">
+            @transition/lb_shared_element_return_transition
+        </item>
+        <item name="android:windowEnterTransition" tools:ignore="PrivateResource">
+            @transition/lb_enter_transition
+        </item>
+        <item name="android:windowReturnTransition" tools:ignore="PrivateResource">
+            @transition/lb_return_transition
+        </item>
+        <item name="android:windowTransitionBackgroundFadeDuration">350</item>
+    </style>
+</resources>

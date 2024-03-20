@@ -1,0 +1,231 @@
+// Signature format: 4.0
+package lineagex.core.ext {
+
+  public final class AndroidViewModelKt {
+    method public static android.content.Context getContext(androidx.lifecycle.AndroidViewModel);
+  }
+
+  public final class ArrayKt {
+    method public static <T> T? next(T![], T current);
+    method public static <T> T? previous(T![], T current);
+  }
+
+  public final class BitmapKt {
+    method public static boolean bytesEqualTo(android.graphics.Bitmap, android.graphics.Bitmap? otherBitmap, optional boolean shouldRecycle);
+    method public static void doRecycle(android.graphics.Bitmap);
+    method public static boolean pixelsEqualTo(android.graphics.Bitmap, android.graphics.Bitmap? otherBitmap, optional boolean shouldRecycle);
+    method public static android.graphics.Bitmap scale(android.graphics.Bitmap, int maxSideLen);
+    method public static android.graphics.Bitmap stackBlur(android.graphics.Bitmap, int radius);
+    method public static byte[] toBytes(android.graphics.Bitmap);
+    method public static int[] toPixels(android.graphics.Bitmap);
+    method public static android.graphics.Bitmap transform(android.graphics.Bitmap, lineagex.core.graphics.Transform transform);
+  }
+
+  public final class BundleKt {
+    method public static <T extends android.os.Parcelable> T? getParcelable(android.os.Bundle, String? key, kotlin.reflect.KClass<T> clazz);
+    method public static inline <reified T extends android.os.Parcelable> T![]? getParcelableArray(android.os.Bundle, String? key, kotlin.reflect.KClass<T> clazz);
+    method public static <T extends java.io.Serializable> T? getSerializable(android.os.Bundle, String? key, kotlin.reflect.KClass<T> clazz);
+  }
+
+  public final class ClipDataKt {
+    method public static java.util.List<android.content.ClipData.Item> asArray(android.content.ClipData);
+  }
+
+  public final class ContentResolverKt {
+    method public static kotlinx.coroutines.flow.Flow<android.database.Cursor> queryFlow(android.content.ContentResolver, android.net.Uri uri, optional String![]? projection, optional android.os.Bundle? queryArgs);
+  }
+
+  public final class ContextKt {
+    method @ColorInt public static int getAttributeColor(android.content.Context, @AttrRes int attribute);
+    method public static int getAttributeResourceId(android.content.Context, @AttrRes int attribute);
+    method public static android.util.TypedValue resolveAttribute(android.content.Context, @AttrRes int attribute);
+  }
+
+  public final class CursorKt {
+    method public static <T> java.util.List<T> mapEachRow(android.database.Cursor?, String![] projection, kotlin.jvm.functions.Function2<? super android.database.Cursor,? super java.lang.Integer[],? extends T> mapping);
+  }
+
+  public final class DoubleKt {
+    method public static double round(double, int decimals);
+    method public static String toFraction(double, optional double tolerance);
+  }
+
+  public final class DrawableKt {
+    method public static <T extends android.graphics.drawable.Drawable> boolean bytesEqualTo(T, T? t);
+    method public static <T extends android.graphics.drawable.Drawable> boolean pixelsEqualTo(T, T? t);
+    method public static <T extends android.graphics.drawable.Drawable> android.graphics.Bitmap toBitmap(T);
+  }
+
+  public final class EnumKt {
+    method public static inline <reified E extends java.lang.Enum<E>> E! next(E);
+    method public static inline <reified E extends java.lang.Enum<E>> E! previous(E);
+  }
+
+  public final class FloatKt {
+    method public static float nextPowerOfTwo(float);
+    method public static float previousPowerOfTwo(float);
+  }
+
+  public final class FlowKt {
+    method public static <T> kotlinx.coroutines.flow.Flow<java.util.List<T>> mapEachRow(kotlinx.coroutines.flow.Flow<? extends android.database.Cursor>, String![] projection, kotlin.jvm.functions.Function2<? super android.database.Cursor,? super java.lang.Integer[],? extends T> mapping);
+  }
+
+  public final class FragmentKt {
+    method public static inline <reified T extends android.view.View> kotlin.properties.ReadOnlyProperty<? super androidx.fragment.app.Fragment,? extends T>! getViewProperty(@IdRes int viewId);
+  }
+
+  public final class IntKt {
+    method @Dimension(unit=androidx.annotation.Dimension.Companion.DP) public static int getToDp(@Px int);
+    method @Px public static int getToPx(@Dimension(unit=androidx.annotation.Dimension.Companion.DP) int);
+  }
+
+  public final class IntentFilterKt {
+    method public static kotlinx.coroutines.flow.Flow<android.content.Intent> broadcastFlow(android.content.IntentFilter, android.content.Context context, optional boolean sendOnStarted);
+  }
+
+  public final class ListKt {
+    method public static <E> E? next(java.util.List<? extends E>, E current);
+    method public static <E> E? previous(java.util.List<? extends E>, E current);
+  }
+
+  public final class MutableListKt {
+    method public static inline <reified E extends java.util.List<ListE>, ListE> E! getOrCreate(java.util.List<E>, int index);
+    method public static inline <reified E extends java.util.Map<MapK, MapV>, MapK, MapV> E! getOrCreate(java.util.List<E>, int index);
+    method public static inline <reified E extends java.util.Set<SetE>, SetE> E! getOrCreate(java.util.List<E>, int index);
+    method public static inline <E> E getOrPut(java.util.List<E>, int index, kotlin.jvm.functions.Function0<? extends E> defaultValue);
+  }
+
+  public final class MutableLiveDataKt {
+    method public static inline <reified T> lineagex.core.livedata.NonNullableLiveDataDelegate<T>! nonNullablePropertyDelegate(kotlin.jvm.functions.Function0<? extends androidx.lifecycle.MutableLiveData<T>> initializer);
+    method public static inline <reified T> lineagex.core.livedata.NullableLiveDataDelegate<T>! nullablePropertyDelegate(kotlin.jvm.functions.Function0<? extends androidx.lifecycle.MutableLiveData<T>> initializer);
+    method public static <T> void setOrPostValue(androidx.lifecycle.MutableLiveData<T>, T value);
+  }
+
+  public final class MutableMapKt {
+    method public static inline <K, reified V extends java.util.List<ListE>, ListE> V! getOrCreate(java.util.Map<K,V>, K key);
+    method public static inline <K, reified V extends java.util.Map<MapK, MapV>, MapK, MapV> V! getOrCreate(java.util.Map<K,V>, K key);
+    method public static inline <K, reified V extends java.util.Set<SetE>, SetE> V! getOrCreate(java.util.Map<K,V>, K key);
+  }
+
+  public final class ParcelKt {
+    method public static <T extends android.os.Parcelable> T? readParcelable(android.os.Parcel, kotlin.reflect.KClass<T> clazz, optional ClassLoader? loader);
+    method public static <T extends java.io.Serializable> T? readSerializable(android.os.Parcel, kotlin.reflect.KClass<T> clazz, optional ClassLoader? loader);
+  }
+
+  public final class RangeKt {
+    method public static int map(android.util.Range<java.lang.Integer>, float percentage);
+  }
+
+  public final class SharedPreferencesKt {
+    method public static <T> kotlinx.coroutines.flow.Flow<T> valueFlow(android.content.SharedPreferences, String key, kotlin.jvm.functions.Function2<? super android.content.SharedPreferences,? super java.lang.String,? extends T> valueGetter);
+  }
+
+  public final class ViewKt {
+    method public static void fade(android.view.View, boolean visible);
+    method public static int getShortAnimTime(android.view.View);
+  }
+
+  public final class WindowKt {
+    method public static void updateBarsVisibility(android.view.Window, optional Integer? behavior, optional Boolean? systemBars, optional Boolean? statusBars, optional Boolean? navigationBars);
+  }
+
+}
+
+package lineagex.core.graphics {
+
+  public enum Rotation {
+    method public final int getCompensationValue();
+    method public final int getOffset();
+    method public static lineagex.core.graphics.Rotation valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
+    method public static lineagex.core.graphics.Rotation[] values();
+    property public final int compensationValue;
+    property public final int offset;
+    enum_constant public static final lineagex.core.graphics.Rotation ROTATION_0;
+    enum_constant public static final lineagex.core.graphics.Rotation ROTATION_180;
+    enum_constant public static final lineagex.core.graphics.Rotation ROTATION_270;
+    enum_constant public static final lineagex.core.graphics.Rotation ROTATION_90;
+    field public static final lineagex.core.graphics.Rotation.Companion Companion;
+  }
+
+  public static final class Rotation.Companion {
+    method public lineagex.core.graphics.Rotation fromDegreesInAperture(int degrees);
+    method public float getDifference(float currentRotation, float targetRotation);
+  }
+
+  public final class Transform {
+    ctor public Transform(lineagex.core.graphics.Rotation rotation, boolean mirror);
+    method public lineagex.core.graphics.Rotation component1();
+    method public boolean component2();
+    method public lineagex.core.graphics.Transform copy(lineagex.core.graphics.Rotation rotation, boolean mirror);
+    method public boolean getMirror();
+    method public lineagex.core.graphics.Rotation getRotation();
+    method public android.graphics.Matrix toMatrix();
+    property public final boolean mirror;
+    property public final lineagex.core.graphics.Rotation rotation;
+    field public static final lineagex.core.graphics.Transform.Companion Companion;
+  }
+
+  public static final class Transform.Companion {
+    method public lineagex.core.graphics.Transform getDEFAULT();
+    property public final lineagex.core.graphics.Transform DEFAULT;
+  }
+
+}
+
+package lineagex.core.livedata {
+
+  public abstract class LiveDataDelegate<T> {
+    ctor public LiveDataDelegate(kotlin.jvm.functions.Function0<? extends androidx.lifecycle.MutableLiveData<T>> initializer);
+    method public final androidx.lifecycle.MutableLiveData<T> getValue();
+    method public abstract operator T getValue(Object? thisRef, kotlin.reflect.KProperty<?> property);
+    method public final operator void setValue(Object? thisRef, kotlin.reflect.KProperty<?> property, T value);
+    property public final androidx.lifecycle.MutableLiveData<T> value;
+  }
+
+  public final class NonNullableLiveDataDelegate<T> extends lineagex.core.livedata.LiveDataDelegate<T> {
+    ctor public NonNullableLiveDataDelegate(kotlin.jvm.functions.Function0<? extends androidx.lifecycle.MutableLiveData<T>> initializer);
+    method public operator T! getValue(Object? thisRef, kotlin.reflect.KProperty<?> property);
+  }
+
+  public final class NullableLiveDataDelegate<T> extends lineagex.core.livedata.LiveDataDelegate<T> {
+    ctor public NullableLiveDataDelegate(kotlin.jvm.functions.Function0<? extends androidx.lifecycle.MutableLiveData<T>> initializer);
+    method public operator T? getValue(Object? thisRef, kotlin.reflect.KProperty<?> property);
+  }
+
+}
+
+package lineagex.core.query {
+
+  public sealed interface Node {
+    method public default String build();
+  }
+
+  public final class Query {
+    ctor public Query(lineagex.core.query.Node root);
+    method public String build();
+    method public lineagex.core.query.Node getRoot();
+    property public final lineagex.core.query.Node root;
+    field public static final String ARG = "?";
+    field public static final lineagex.core.query.Query.Companion Companion;
+  }
+
+  public static final class Query.Companion {
+  }
+
+  public interface QueryFlow<T> {
+    method public kotlinx.coroutines.flow.Flow<android.database.Cursor> flowCursor();
+    method public kotlinx.coroutines.flow.Flow<java.util.List<T>> flowData();
+  }
+
+  public final class QueryKt {
+    method public static infix lineagex.core.query.Query and(lineagex.core.query.Query, lineagex.core.query.Query other);
+    method public static infix <T> lineagex.core.query.Query eq(String, T other);
+    method public static infix lineagex.core.query.Query eq(lineagex.core.query.Query, lineagex.core.query.Query other);
+    method public static infix <T> lineagex.core.query.Query in(String, java.util.Collection<? extends T> values);
+    method public static lineagex.core.query.Query? join(Iterable<lineagex.core.query.Query>, kotlin.jvm.functions.Function2<? super lineagex.core.query.Query,? super lineagex.core.query.Query,lineagex.core.query.Query> func);
+    method public static operator lineagex.core.query.Query not(lineagex.core.query.Query);
+    method public static infix lineagex.core.query.Query or(lineagex.core.query.Query, lineagex.core.query.Query other);
+  }
+
+}
+

@@ -1,0 +1,89 @@
+// Signature format: 4.0
+package lineagex.ui.ext {
+
+  public final class AppBarLayoutKt {
+    method public static void setOffset(com.google.android.material.appbar.AppBarLayout, @Px int offsetPx, androidx.coordinatorlayout.widget.CoordinatorLayout coordinatorLayout);
+  }
+
+}
+
+package lineagex.ui.listitem {
+
+  public final class ListItem extends android.widget.FrameLayout {
+    ctor public ListItem(android.content.Context context);
+    ctor public ListItem(android.content.Context context, optional android.util.AttributeSet? attrs);
+    method public CharSequence? getHeadlineText();
+    method public android.graphics.drawable.Drawable? getLeadingIconImage();
+    method public CharSequence? getSupportingText();
+    method public android.graphics.drawable.Drawable? getTrailingIconImage();
+    method public CharSequence? getTrailingSupportingText();
+    method public void setHeadlineText(@StringRes int resId);
+    method public void setHeadlineText(@StringRes int resId, java.lang.Object... formatArgs);
+    method public void setHeadlineText(CharSequence?);
+    method public void setLeadingIconImage(android.graphics.Bitmap bm);
+    method public void setLeadingIconImage(android.graphics.drawable.Drawable?);
+    method public void setLeadingIconImage(android.graphics.drawable.Icon icon);
+    method public void setLeadingIconImage(android.net.Uri uri);
+    method public void setLeadingIconImage(@DrawableRes int resId);
+    method public void setSupportingText(@StringRes int resId);
+    method public void setSupportingText(@StringRes int resId, java.lang.Object... formatArgs);
+    method public void setSupportingText(CharSequence?);
+    method public void setTrailingIconImage(android.graphics.Bitmap bm);
+    method public void setTrailingIconImage(android.graphics.drawable.Drawable?);
+    method public void setTrailingIconImage(android.graphics.drawable.Icon icon);
+    method public void setTrailingIconImage(android.net.Uri uri);
+    method public void setTrailingIconImage(@DrawableRes int resId);
+    method public void setTrailingSupportingText(@StringRes int resId);
+    method public void setTrailingSupportingText(@StringRes int resId, java.lang.Object... formatArgs);
+    method public void setTrailingSupportingText(CharSequence?);
+    property public final CharSequence? headlineText;
+    property public final android.graphics.drawable.Drawable? leadingIconImage;
+    property public final CharSequence? supportingText;
+    property public final android.graphics.drawable.Drawable? trailingIconImage;
+    property public final CharSequence? trailingSupportingText;
+  }
+
+}
+
+package lineagex.ui.slider {
+
+  public final class HorizontalSlider extends lineagex.ui.slider.Slider {
+    ctor public HorizontalSlider(android.content.Context context);
+    ctor public HorizontalSlider(android.content.Context context, optional android.util.AttributeSet? attrs);
+    method public kotlin.Triple<java.lang.Float,java.lang.Float,java.lang.Float> thumb();
+    method public android.graphics.RectF track();
+  }
+
+  public abstract class Slider extends android.view.View {
+    ctor public Slider(android.content.Context context);
+    ctor public Slider(android.content.Context context, optional android.util.AttributeSet? attrs);
+    ctor public Slider(android.content.Context context, optional android.util.AttributeSet? attrs, optional int defStyleAttr);
+    method public final kotlin.jvm.functions.Function1<java.lang.Float,kotlin.Unit>? getOnProgressChangedByUser();
+    method public final float getProgress();
+    method public final lineagex.core.graphics.Rotation getScreenRotation();
+    method public final int getSteps();
+    method public final kotlin.jvm.functions.Function1<java.lang.Float,java.lang.String> getTextFormatter();
+    method public final void setOnProgressChangedByUser(kotlin.jvm.functions.Function1<? super java.lang.Float,kotlin.Unit>?);
+    method public final void setProgress(float);
+    method public final void setScreenRotation(lineagex.core.graphics.Rotation);
+    method public final void setSteps(int);
+    method public final void setTextFormatter(kotlin.jvm.functions.Function1<? super java.lang.Float,java.lang.String>);
+    method public abstract kotlin.Triple<java.lang.Float,java.lang.Float,java.lang.Float> thumb();
+    method public abstract android.graphics.RectF track();
+    property public final kotlin.jvm.functions.Function1<java.lang.Float,kotlin.Unit>? onProgressChangedByUser;
+    property public final float progress;
+    property public final lineagex.core.graphics.Rotation screenRotation;
+    property public final int steps;
+    property public final kotlin.jvm.functions.Function1<java.lang.Float,java.lang.String> textFormatter;
+  }
+
+  public final class VerticalSlider extends lineagex.ui.slider.Slider {
+    ctor public VerticalSlider(android.content.Context context);
+    ctor public VerticalSlider(android.content.Context context, optional android.util.AttributeSet? attrs);
+    ctor public VerticalSlider(android.content.Context context, optional android.util.AttributeSet? attrs, optional int defStyleAttr);
+    method public kotlin.Triple<java.lang.Float,java.lang.Float,java.lang.Float> thumb();
+    method public android.graphics.RectF track();
+  }
+
+}
+

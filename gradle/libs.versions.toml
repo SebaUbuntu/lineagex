@@ -1,0 +1,21 @@
+[versions]
+agp = "8.3.1"
+kotlin = "1.8.10"
+coreKtx = "1.12.0"
+appcompat = "1.6.1"
+leanback = "1.2.0-alpha04"
+preference = "1.2.1"
+material = "1.9.0"
+metalavaGradle = "0.3.5"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-leanback = { group = "androidx.leanback", name = "leanback", version.ref = "leanback" }
+androidx-preference = { group = "androidx.preference", name = "preference", version.ref = "preference" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+jetbrainsKotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+metalavaGradle = { id = "me.tylerbwong.gradle.metalava", version.ref = "metalavaGradle" }

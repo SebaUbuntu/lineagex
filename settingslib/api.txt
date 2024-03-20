@@ -1,0 +1,15 @@
+// Signature format: 4.0
+package lineagex.settingslib {
+
+  public abstract class SettingsActivity extends androidx.appcompat.app.AppCompatActivity {
+    ctor public SettingsActivity();
+    method public abstract lineagex.settingslib.SettingsFragment getRootSettingsFragment();
+  }
+
+  public abstract class SettingsFragment extends androidx.preference.PreferenceFragmentCompat {
+    ctor public SettingsFragment(@XmlRes int preferencesResId);
+    method @CallSuper public void onCreatePreferences(android.os.Bundle? savedInstanceState, String? rootKey);
+  }
+
+}
+
