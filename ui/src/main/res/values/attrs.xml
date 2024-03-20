@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2023 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <declare-styleable name="ListItem">
+        <attr name="headlineText" format="string" />
+        <attr name="leadingIconImage" format="reference" />
+        <attr name="supportingText" format="string" />
+        <attr name="trailingIconImage" format="reference" />
+        <attr name="trailingSupportingText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Slider">
+        <attr name="trackBorderColor" format="color" />
+        <attr name="trackColor" format="color" />
+        <attr name="trackColorGradient" format="boolean" />
+        <attr name="trackColorGradientStart" format="color" />
+        <attr name="trackColorGradientCenter" format="color" />
+        <attr name="trackColorGradientEnd" format="color" />
+        <attr name="thumbColor" format="color" />
+        <attr name="thumbTextColor" format="color" />
+        <attr name="thumbTextSize" format="dimension" />
+    </declare-styleable>
+</resources>

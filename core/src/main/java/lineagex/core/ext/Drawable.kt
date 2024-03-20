@@ -1,0 +1,28 @@
+/*
+ * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+package lineagex.core.ext
+
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.drawable.BitmapDrawable
+import android.graphics.drawable.Drawable
+import kotlin.reflect.safeCast
+
+fun <T : Drawable> T.bytesEqualTo(t: T?) = toBitmap().bytesEqualTo(t?.toBitmap(), true)
+
+fun <T : Drawable> T.pixelsEqualTo(t: T?) = toBitmap().pixelsEqualTo(t?.toBitmap(), true)
+
+fun <T : Drawable> T.toBitmap(): Bitmap {
+    BitmapDrawable::class.safeCast(this)?.let {
+        return it.bitmap.copy(it.bitmap.config, true)
+    }
+
+    val bitmap = Bitmap.createBitmap(intrinsicWidth, intrinsicHeight, Bitmap.Config.ARGB_8888)
+    val canvas = Canvas(bitmap)
+    setBounds(0, 0, canvas.width, canvas.height)
+    draw(canvas)
+    return bitmap
+}
